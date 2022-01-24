@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Created to calculate the bulk of Airfoil cases
 # rm -r ~/DiplomaThesisData/log
 rm -r ~/DiplomaThesisData/error
 
