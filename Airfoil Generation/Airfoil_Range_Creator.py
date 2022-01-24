@@ -124,6 +124,7 @@ def organizer(r, curves_up, curves_down, directory, reset=True):
 
 
 if __name__ == "__main__":
+    ABS_PATH = "/home/freshstart/DiplomaThesisData/"
     args = sys.argv
     args.pop(0)
     if (len(args) == 0 ):
@@ -164,9 +165,9 @@ if __name__ == "__main__":
     points_up, points_down = readfile(path)
     curves_up = spline_fitting_over_range(points_up, pers)
     curves_down = spline_fitting_over_range(points_down, pers)
-    DIRS = organizer(pers,curves_up,curves_down,f"./r_{pers[0]}_{pers[-1]}")
+    DIRS = organizer(pers,curves_up,curves_down,f"{ABS_PATH}r_{pers[0]}_{pers[-1]}")
     
-    with open(f"./r_{pers[0]}_{pers[-1]}/DIRS.dat","w") as file:
+    with open(f"{ABS_PATH}r_{pers[0]}_{pers[-1]}/DIRS.dat","w") as file:
         file.write(DIRS)
 
 
