@@ -35,7 +35,7 @@ do
             break
         fi
         ~/2dcp cp.bin
-        python ~/Dropbox/DTC/Code/CFD_CNN_Thesis/Airfoil Generation/CP_export.py `pwd`/cp.dat
+        python ~/Dropbox/DTC/Code/CFD_CNN_Thesis/Airfoil\ Generation/CP_export.py `pwd`/cp.dat
         echo $i >> $PTH/LOG.dat
     fi
 done

@@ -31,14 +31,14 @@ def sdf_map(geometry,grid): #needs refining
                                             k = sdf
                                             pos = ll
                             if((grid[0][ii,jj]>=0) & (grid[0][ii,jj]<=1)):
-    	                        if((abs(grid[1][ii,jj]) <= abs(geometry[pos,1]))):
-    	                                #standard geometry
-    	                                v=-1 #multiplier for point in geometry
-    	                                # print((grid[0][ii,jj],grid[1][ii,jj])," point ", geometry[pos,:])
-    	                        elif((ll > int(len(geometry)/2)) & (grid[1][ii,jj]>=geometry[pos,1]) & (grid[1][ii,jj]<=geometry[pos-int(len(geometry)/2),1])):
-    	                                # close to trailing edge there are some areas where the underside of the airfoil gains positive y-coordinates
-    	                                v=-1 #multiplier for point in geometry
-    	                                # print((grid[0][ii,jj],grid[1][ii,jj])," point ", geometry[pos,:])
+                                if((abs(grid[1][ii,jj]) <= abs(geometry[pos,1]))):
+                                        #standard geometry
+                                        v=-1 #multiplier for point in geometry
+                                        # print((grid[0][ii,jj],grid[1][ii,jj])," point ", geometry[pos,:])
+                                elif((ll > int(len(geometry)/2)) & (grid[1][ii,jj]>=geometry[pos,1]) & (grid[1][ii,jj]<=geometry[pos-int(len(geometry)/2),1])):
+                                        # close to trailing edge there are some areas where the underside of the airfoil gains positive y-coordinates
+                                        v=-1 #multiplier for point in geometry
+                                        # print((grid[0][ii,jj],grid[1][ii,jj])," point ", geometry[pos,:])
                             GRID_SDF[ii,jj]=k*v # Magnitude assignment to each node
             return GRID_SDF
         except:
