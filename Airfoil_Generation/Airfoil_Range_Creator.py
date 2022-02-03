@@ -3,7 +3,7 @@ import os
 import shutil
 import numpy as np
 import scipy.interpolate as spln
-import Images_Generator as ig
+import Airfoil_Generation.Images_Generator as ig
 # import Airfoil_DataSet_Generator_Randomizer as air
 
 """
