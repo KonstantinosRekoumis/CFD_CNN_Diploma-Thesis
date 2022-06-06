@@ -8,6 +8,7 @@ using FileIO
 using LaTeXStrings
 using DelimitedFiles
 gr()
+col = [RGB(i) for i in [0x00ab9f,0x7409b7,0xd2cf00,0xff6f00] ] # mah precious colors
 
 loadModelsGPU = (path;top="model-up.bson",down="model-down.bson") -> (
     filename = path*top;
@@ -115,11 +116,11 @@ end
 # plot!(test,x,Points_Cp_up[:,1])
 
 pgfplotsx()
+# gr() #Debug Only
 plot(   title = "Accuracy plot for airfoils deformed over the original range ",
         xlabel = "Deformation Percentage [%]",
         ylabel = "Accuracy Percentage [%]",
         minorgrid = true)
-plot!(pers[1,:],c[1,:],label = "Top side")
-plot!(pers[1,:],c[2,:],label = "Bottom side")
-
-savefig(data_pth*"Acc_-50_50.pdf")
+plot!(pers[1,:],c[1,:],label = "Top side",c = col[4])
+plot!(pers[1,:],c[2,:],label = "Bottom side",c = col[2])
+savefig("/home/freshstart/DiplomaThesisData/images/Acc_-50_50.pdf")
