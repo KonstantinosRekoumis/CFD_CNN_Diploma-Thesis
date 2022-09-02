@@ -1,4 +1,4 @@
-# CFD_CNN_Thesis
+# Fast flow prediction along airfoils operating at transonic conditions using Machine Learning
 
 ## Abstract
 This Thesis's main focus is how we can couple Fluid Dynamics with Artificial Intelligence. This work is not an original idea as many other scientists
